@@ -1,4 +1,4 @@
-import smtpPassword from '../data/smtpPassword.js'
+import smtpPassword from '../../smtpPassword.js'
 import projects from '../data/projects.js'
 // DECLARATIONS DES VARIABLES
 // SCROLL TO
