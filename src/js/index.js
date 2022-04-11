@@ -80,13 +80,14 @@ let arrowCurrentDirection = 'bottom'
 
 function animeArrow() {
   setInterval(() => {
+    arrowSeconds += 1
     if (arrowSeconds === 2) {
       arrowSeconds = 0
       arrowElem.style.transform = 'translateY(0vh)'
     } else {
       arrowElem.style.transform = 'translateY(10vh)'
     }
-    arrowSeconds += 1
+
   },1000)
 }
 
