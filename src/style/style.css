@@ -1385,3 +1385,17 @@ main {
   transition: .5s cubic-bezier(0,.77,1,.24);
 }
 
+#quizz{
+  background-image: url(../assets/screenshots/Quizz.jpg);
+}
+
+#moviefinder{
+  background-image: url(../assets/screenshots/MovieFinder.jpg);
+}
+
+#images-app{
+  background-image: url(../assets/screenshots/ImagesApp.jpg)
+}
+#notepad{
+  background-image: url(../assets/screenshots/Notepad.jpg)
+}
