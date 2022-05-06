@@ -841,7 +841,7 @@ main {
   font-style: oblique;
   text-align: center;
   padding: 0 2rem;
-  font-size: .85rem;
+  font-size: .9rem;
 }
 
 .skills-body{
@@ -1030,10 +1030,10 @@ main {
     height: 50px;
   }
   .skills-backend p{
-    font-size: .8rem;
+    font-size: .9rem;
   }
   .skills-backend li{
-    font-size: .8rem;
+    font-size: .9rem;
   }
   .skills-backend h2{
     font-size: 1.1rem;
@@ -1049,7 +1049,7 @@ main {
     font-size: 1rem;
    }
    .skills-header p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
    }
   .skills-header{
     padding:  2.5rem 0;
