@@ -319,7 +319,7 @@ function globalScrollListener() {
       })
     }
     // section home
-    if (scrolled < (window.innerHeight - navbarHeight) ) {
+    if (scrolled < (window.innerHeight - navbarHeight -1) ) {
       if (document.querySelector('.link-underline.home').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.home').classList.toggle('active')
@@ -334,7 +334,7 @@ function globalScrollListener() {
     }
 
     // section projects
-    if (scrolled >=  (window.innerHeight - navbarHeight)
+    if (scrolled >=  (window.innerHeight - navbarHeight - 1 )
       && scrolled <= sectionProjectsHeight + (window.innerHeight - navbar.getBoundingClientRect().height)) {
       if (document.querySelector('.link-underline.projects').classList.contains('active')) {
       } else {
