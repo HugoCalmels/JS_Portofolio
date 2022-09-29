@@ -9,10 +9,13 @@ let VH_UNIT = window.innerHeight / 100 // response in pixels
 let lastTopPosition = window.scrollY
 let navbarHeight = VH_UNIT * 8
 // GLOBAL SCROLL
-const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+
+let sectionHomeHeight = document.querySelector('.section.home').getBoundingClientRect().height
 let sectionProjectsHeight = document.querySelector('.section.projects').getBoundingClientRect().height
 let sectionSkillsHeight = document.querySelector('.section.skills').getBoundingClientRect().height
 let sectionContactHeight = document.querySelector('.section.contact').getBoundingClientRect().height
+let footerHeight = document.querySelector('.footer').getBoundingClientRect().height
+const scrollable = document.documentElement.scrollHeight;
 // NAVBAR
 let logoImageDark = document.querySelector('#logo-dark')
 let logoImageLight = document.querySelector('#logo-light')
@@ -345,9 +348,9 @@ function globalScrollListener() {
     } else {
       document.querySelector('.link-underline.projects').classList.remove('active')
     }
-    // section skills
-    if (scrolled >=  (sectionProjectsHeight + window.innerHeight - navbarHeight ) 
-      && scrolled <= scrollable - navbar.getBoundingClientRect().height) {
+    // section skillst)
+    if (( scrolled > (sectionProjectsHeight + window.innerHeight - navbarHeight)) 
+      && scrolled <   (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)) {
       if (document.querySelector('.link-underline.skills').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.skills').classList.toggle('active')
@@ -356,7 +359,9 @@ function globalScrollListener() {
       document.querySelector('.link-underline.skills').classList.remove('active')
     }
     // section contact
-    if (scrolled >= scrollable - navbar.getBoundingClientRect().height){
+    console.log("scroable"+scrollable)
+    console.log("scroled"+scrolled)
+    if (scrolled  >=  (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)  ){
       if (document.querySelector('.link-underline.contact').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.contact').classList.toggle('active')

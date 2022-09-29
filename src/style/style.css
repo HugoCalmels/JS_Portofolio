@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  height: auto;
+}
+html{
+  height: auto;
 }
 
 
@@ -350,7 +354,7 @@ main {
 
 /* ====== DEBUT SECTION PROJECTS ====== */
 .section.projects {
-  min-height: 92vh;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
 
@@ -358,15 +362,22 @@ main {
  
   display: flex;
   justify-content: center;
-
-
 }
 #projects-taste{
  margin:0;
  font-family: "Barlow";
- font-size: 1.3rem;
- font-weight: 400;
+ font-size: 1.5rem;
+ font-weight: 600;
  padding: 1rem 0;
+ text-decoration: underline;
+}
+.projets-taste-text{
+  padding-bottom: 1rem;
+}
+.projets-taste-text p{
+  font-family: 'Roboto';
+  font-size: .8rem;
+  margin: 0;
 }
 
 .container-section-projects{
@@ -387,6 +398,7 @@ main {
 .projects-disclaimer{
   border: 3px solid black;
   padding: 0 .5rem;
+  border-radius: 8px;
 }
 .header-projects p{
   margin: 0;
@@ -395,7 +407,7 @@ main {
 .header-projects-header{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
 
 }
 .header-projects-informations{
@@ -512,6 +524,15 @@ main {
 #snake {
   background-image: url(../assets/screenshots/Snake.png);
 }
+#clonebook {
+  background-image: url(../assets/screenshots/Clonebook.png);
+  background-size: cover;
+}
+#learnroom {
+  background-image: url(../assets/screenshots/Learnroom.png);
+background-size: cover;
+}
+
 
 
 
@@ -820,8 +841,7 @@ main {
 .skills-header{
   color: var(--lightGrey-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 0;
@@ -829,19 +849,19 @@ main {
 .skills-header h4{
   font-family: 'Roboto';
   margin:0;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: underline;
 }
 .skills-header p{
   font-family: 'Roboto';
-  line-height: 1.5;
+
   margin:0;
-  padding:0 7.5rem;
-  font-weight: 300;
-  font-style: oblique;
-  text-align: center;
-  padding: 0 2rem;
-  font-size: 1rem;
+
+
+
+  padding: 0;
+  font-size: .9rem;
 }
 
 .skills-body{
