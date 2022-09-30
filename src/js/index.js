@@ -41,19 +41,26 @@ listenCards()
 // NAVBAR HAMBURGER
 let btnHamburger = document.querySelector('.hamburger-menu')
 let hamburgerMenu = document.querySelector('.hamburger-container')
+let hamburgerWrapper = document.querySelector('#hamburger-wrapper')
 btnHamburger.addEventListener('click', () => {
  
 
   if (hamburgerMenu.classList.contains('active')) {
+    hamburgerMenu.style.transform = "translateY(-200px)"
     setTimeout(() => {
-      hamburgerMenu.style.transform = "translateY(-200px)"
-    }, 5)
+
+     
+      hamburgerWrapper.style.display ="none"
+    }, 500)
   } else {
+    hamburgerWrapper.style.display ="flex"
     setTimeout(() => {
+  
       hamburgerMenu.style.transform = "translateY(0px)"
     }, 5)
   }
   hamburgerMenu.classList.toggle('active')
+  
 
 })
 
@@ -370,7 +377,10 @@ function globalScrollListener() {
       document.querySelector('.link-underline.projects').classList.remove('active')
     }
     // section skillst)
-    if (( scrolled > (sectionProjectsHeight + window.innerHeight - navbarHeight)) 
+    console.log('scrolled:' + scrolled)
+    console.log("before:" + (sectionProjectsHeight + sectionHomeHeight + navbarHeight))
+    console.log("after" +(sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight))
+    if (( scrolled > (sectionProjectsHeight + sectionHomeHeight + navbarHeight)) 
       && scrolled <   (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)) {
       if (document.querySelector('.link-underline.skills').classList.contains('active')) {
       } else {

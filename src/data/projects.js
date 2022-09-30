@@ -74,7 +74,7 @@ const projects = [
     langage: 'React',
     title:'Notepad',
     date:'Mai 2022',
-    description: `Exercice React pour bien organiser ses compenents. C'est un notepad tout simple dans lequel on peut utiliser le Markdown, puis enregistrer et éditer ses notes.`,
+    description: `Exercice React pour bien organiser ses composants. C'est un notepad tout simple dans lequel on peut utiliser le Markdown, puis enregistrer et éditer ses notes.`,
     nbOfDeveloppers: 1,
     github: "https://github.com/HugoCalmels/react-notepad",
     link: "https://notepad-plus.netlify.app/",
