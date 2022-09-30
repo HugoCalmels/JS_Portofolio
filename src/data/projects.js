@@ -63,7 +63,7 @@ const projects = [
   {
     langage: 'React',
     title:'Images-App',
-    date:'Mars 2022',
+    date:'Avril 2022',
     description: `Exercice React. Utilisation de l'API "unsplash".`,
     nbOfDeveloppers: 1,
     github: "https://github.com/HugoCalmels/react-images-app",
