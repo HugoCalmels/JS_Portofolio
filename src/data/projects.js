@@ -62,6 +62,16 @@ const projects = [
   },
   {
     langage: 'React',
+    title:'Images-App',
+    date:'Mars 2022',
+    description: `Exercice React. Utilisation de l'API "unsplash".`,
+    nbOfDeveloppers: 1,
+    github: "https://github.com/HugoCalmels/react-images-app",
+    link: "https://image-app-plus.netlify.app/",
+    tags: ["Asynchrone", "Animations"],
+  },
+  {
+    langage: 'React',
     title:'Notepad',
     date:'Mai 2022',
     description: `Exercice React pour bien organiser ses compenents. C'est un notepad tout simple dans lequel on peut utiliser le Markdown, puis enregistrer et éditer ses notes.`,
