@@ -42,7 +42,19 @@ listenCards()
 let btnHamburger = document.querySelector('.hamburger-menu')
 let hamburgerMenu = document.querySelector('.hamburger-container')
 btnHamburger.addEventListener('click', () => {
+ 
+
+  if (hamburgerMenu.classList.contains('active')) {
+    setTimeout(() => {
+      hamburgerMenu.style.transform = "translateY(-200px)"
+    }, 5)
+  } else {
+    setTimeout(() => {
+      hamburgerMenu.style.transform = "translateY(0px)"
+    }, 5)
+  }
   hamburgerMenu.classList.toggle('active')
+
 })
 
 
@@ -59,20 +71,29 @@ houseLOL.addEventListener('mouseout', () => {
   houseLOLunderline.style.backgroundColor = "var(--lightGrey-color)"
 })
 // LOL HC LOGO
-/*
-let logooo = document.querySelector('.logo')
-let logoHC = document.querySelector('.logo img')
-logooo.addEventListener('click', (e) => {
 
-    if(logoHC.classList.contains('flip-forward')){
-      logoHC.classList.remove('flip-forward');
-      logoHC.classList.add('flip-backward');
-    }else{
-      logoHC.classList.add('flip-forward');
-      logoHC.classList.remove('flip-backward');
-    }  
+let logooo = document.querySelector('.logo')
+let logoHC1 = document.querySelectorAll('.logo img')[0]
+let logoHC2 = document.querySelectorAll('.logo img')[1]
+logooo.addEventListener('mouseover', (e) => {
+  console.log(e)
+
+
+  logoHC1.classList.add('active');
+  setTimeout(() => {
+   
+    logoHC1.classList.remove('active');
+  }, 500)
+  
+  logoHC2.classList.add('active');
+  setTimeout(() => {
+   
+    logoHC2.classList.remove('active');
+  },500)
+
+   
 })
-*/
+
 
 // ARROW ANIM
 let arrowElem = document.querySelector('.arrow-bottom');
@@ -359,8 +380,6 @@ function globalScrollListener() {
       document.querySelector('.link-underline.skills').classList.remove('active')
     }
     // section contact
-    console.log("scroable"+scrollable)
-    console.log("scroled"+scrolled)
     if (scrolled  >=  (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)  ){
       if (document.querySelector('.link-underline.contact').classList.contains('active')) {
       } else {

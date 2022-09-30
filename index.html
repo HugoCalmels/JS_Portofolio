@@ -13,6 +13,7 @@
 
   <nav class="navbar">
 
+    <div class="navbar-wrapper">
     <div class="logo" id="home">
       <img id="logo-dark" src="./src/assets/logos/LogoDarkSquare4.jpg" >   
       <img id="logo-light" src="./src/assets/logos/LogoLightSquare4.jpg" > 
@@ -23,14 +24,15 @@
 
     <div class="navbar-links">
       
-      <div class="link-house" id="house">
-        <div class="link-house-container">
-          <img id="logo-top-house" src="./src/assets/logos/lightblue-house.png">
-          <span class="link-underline home"></span>
-        </div>
-      </div>
+    
       
       <div class="links-container">
+        <div class="link-house" id="house">
+          <div class="link-house-container">
+            <img id="logo-top-house" src="./src/assets/logos/lightblue-house.png">
+            <span class="link-underline home"></span>
+          </div>
+        </div>
       <div class="link projects" id="projects">
         <h3 id="projects">PROJETS
           <span class="link-underline projects"></span>
@@ -56,14 +58,17 @@
       </div>
 
     </div>
-
+  </div>
   </nav>
+
+  <div class="hamburger-wrapper">
 
   <div class="hamburger-container">
     <li id="projects">PROJETS</li>
     <li id="skills">COMP&#201TENCES</li>
     <li id="contact">CONTACT</li>
   </div>
+</div>
  
   
   <main>
@@ -121,23 +126,16 @@
         <h3 id="projects-taste">Projets</h3>
         <div class="projets-taste-text">
           <p>Chaque projet témoigne de mon niveau et mon évolution. Au début tout était difficile et confus. Et puis à force de pratiquer, j'ai réussi à vaincre le syndrome de l'imposteur.</p>
-          <p>C'est la partie visible de l'iceberg, l'autre partie ce sont des centaines de projets plus petits, sur lesquels je me suis focalisé sur certains éléments ( navbar, select menu, animations, etc .. )</p>
+          <p>C'est la partie visible de l'iceberg, l'autre partie ce sont des centaines de projets plus petits, sur lesquels je me suis focalisé sur certains éléments ( navbar, select menu, animations, etc .. ).</p>
           
         </div>
         <div class="header-projects">
           <div class="projects-disclaimer">
             <div class="header-projects-header">
               <span><img src="./src/assets/logos/warning-logo.png"></span>
-              <p>Un serveur back-end hébergé sur Heroku se voit un "dyno" attribué.</p>
+              <p id="disclaimer-text">Les applications hébergées gratuitement sont sucseptibles d'être lentes au premier chargement.</p>
             </div>
-            <div class="header-projects-informations">
-              <li>
-                - Si ce dyno est gratuit, il faudra patentier quelques secondes au premier chargement pour que le dyno se réveille. Ce dernier repartira en mode sommeil après 30 minutes d'inactivité du site.
-              </li>
-              <li>
-                - Si le dyno est payant ( 7€/mois ), le dyno ne part jamais en mode sommeil, et il n'y a aucun temps d'attente au premier chargement.
-              </li>
-            </div>
+            
           </div>
 
           <div class="menu-projects">
@@ -157,69 +155,76 @@
       </div>
     </div>
     <div class="section skills">
-      <div class="skills-background">
-        <div class="background-top"></div>
-        <div class="background-bottom"></div>
+      <div class="sk-header-container">
+      <div class="sk-header">
+        <h4>Compétences</h4>
+        <p>En développant mes projets, j'ai pu acquérir l'expérience et les compétences pour développer un site ou une application en partant de zéro.</p>
+        <p>J'ai pu copier des maquettes au pixel près, créer mes propres maquettes sur Figma, gérer des grosses quantités de données avec Redux, créer du code et des algorythmes performants, proposer des animations et une expérience utilisateur (UX) fluide , je suis aussi curieux concernant les interfaces utilisateur (UI).</p>
+            
+        <p>Mais j'ai aussi pu mettre en place un serveur ou une API, schématiser et créer une base de données relationnelle, coder les requêtes nécesssaires pour développer une fonctionnalité, sécuriser mes requêtes par un code généré aléatoirement (token).</p>
+
+        <p>Ayant déjà travaillé en équipe, je suis également à l'aise sur Github. Je travaille essentiellement sur Linux.</p>
       </div>
-      <div class="skills-foreground">
-        <div class="skills-header">
-          <h4>Compétences</h4>
-          <p>* Mon langage de back-end est actuellement Ruby on Rails, mais le marché de l'emploi recherche principalement du Java ou du Node.js,
-          j'aimerais me former sur ces technologies rapidement.</p>
-
-        </div>
-        <div class="skills-body">
-          <div class="skills-frontend">
-            <div class="skills-header-frontend">
-              <img src="./src/assets/logos/icon-front3.png">
-              <h2>Front-end</h2>
-              <p>Je privilégie les structures et design paterns simples, avec des interactions réfléchies et détaillées.</p>
-            </div>
-            <div class="skills-body-frontend">
-              <div class="body-langages">
-                <h5>Languages</h5>
-                <p>HTML, CSS, Sass, JS, React</p>
+    </div>
+      <div class="sk-body-container">
+        <div class="sk-body-box-colored"></div>
+        <div class="sb-body">
+          <div class="skills-body">
+            <div class="skills-frontend">
+              <div class="skills-header-frontend">
+                <img src="./src/assets/logos/icon-front3.png">
+                <h2>Front-end</h2>
+                <p>Je privilégie les structures et design paterns simples, avec des interactions réfléchies et détaillées.</p>
               </div>
-              <div class="body-tools">
-                <h5>Outils</h5>
-                <li>Codepen</li>
-                <li>Figma</li>
-                <li>Redux</li>
-                <li>Netlify</li>
-                <li>Styled Components</li>
-                <li>Jest</li>
-                
+              <div class="skills-body-frontend">
+                <div class="body-langages">
+                  <h5>Languages</h5>
+                  <p>HTML, CSS, Sass, JS, React</p>
+                </div>
+                <div class="body-tools">
+                  <h5>Outils</h5>
+                  <li>Codepen</li>
+                  <li>Figma</li>
+                  <li>Redux & redux/toolkit</li>
+                  <li>Jest</li>
+                  
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="skills-backend">
-            <div class="skills-header-backend">
-              <img src="./src/assets/logos/icon-backend2.png">
-              <h2>Back-end</h2>
-              <p>
-                Je peux aussi mettre en place un serveur complet, incluant la sécurité des données.
-              </p>
-            </div>
-            <div class="skills-body-backend">
-              <div class="body-langages">
-                <h5>Languages</h5>
-                <p>Ruby, Ruby on Rails</p>
+  
+            <div class="skills-backend">
+              <div class="skills-header-backend">
+                <img src="./src/assets/logos/icon-backend2.png">
+                <h2>Back-end</h2>
+                <p>
+                  Je peux aussi mettre en place un serveur complet, incluant la sécurité des données.
+                </p>
               </div>
-              <div class="body-tools">
-                <h5>Outils</h5>
-                <li>Git</li>
-                <li>PostgreSQL</li>
-                <li>REST API</li>
-                <li>JWT-tokens</li>
-                <li>Heroku</li>
+              <div class="skills-body-backend">
+                <div class="body-langages">
+                  <h5>Languages</h5>
+                  <p>Ruby, Ruby on Rails</p>
+                </div>
+                <div class="body-tools">
+                  <h5>Outils</h5>
+                  <li>PostgreSQL</li>
+                  <li>REST API</li>
+                  <li>JWT-tokens</li>
+                  <li>AWS</li>
+                </div>
               </div>
+              
             </div>
-          </div>
-
-        </div>
         
+          </div>
+          <div class="skills-others">
+
+            <h4>Autres outils :</h4>
+            <p>Github, Heroku, Netlify, Trello</p>
+          </div>
+        </div>
       </div>
+      <div class="skills-gradiant"></div>
     </div>
     <div class="section contact">
  
@@ -250,12 +255,12 @@
               </div>
 
               <div class="form-bottom">
-                <textarea id="input-textarea" placeholder="Merci de détailler au plus vos besoins pour faciliter nos futurs échanges."></textarea>
+                <textarea id="input-textarea" placeholder="Merci de m'indiquer en détails vos besoins."></textarea>
                 <div class="input-checkbox">
                   <div class="checkbox-div">
                     <input id="checkbox" type="checkbox"> 
                   </div>
-                  <label>
+                  <label id="label-cb-contact">
                     En soumettant ce formulaire, j'accepete que les informations
                     saisies soient exploitées dans le cadre de la demande de contact.
                   </label>
@@ -276,7 +281,7 @@
          
           <div class="infos-basic">
             <p><span><img  src="./src/assets/logos/icon-house.png"></span>: Toulouse, France</p>
-            <p><span><img src="./src/assets/logos/icon-email.png"></span>: calmels.hugo@yahoo.fr</p>
+            <p><span><img src="./src/assets/logos/icon-email.png"></span>: <span id="email-perso">&nbsp;calmels.hugo@yahoo.fr</span></p>
             <p><span><img src="./src/assets/logos/icon-phone.png"></span>: 07.68.10.99.80</p>
             <p><span><img  src="./src/assets/logos/icon-linedin.png"></span><a href="https://linkedin.com/in/hugo-calmels" target="_blank">: linkedin</a></p>
           </div>
