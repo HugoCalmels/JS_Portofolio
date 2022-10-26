@@ -1,5 +1,7 @@
 import smtpPassword from '../../smtpPassword.js'
 import projects from '../data/projects.js'
+
+const reverseProjects = projects.reverse()
 // DECLARATIONS DES VARIABLES
 // SCROLL TO
 const links = document.querySelectorAll('.link h3')
@@ -423,7 +425,7 @@ function listenCards() {
 }
 
 function displayCards() {
-  projects.forEach((project) => {
+  reverseProjects.forEach((project) => {
     let cardContainer = document.createElement('div')
     cardContainer.className += 'card-project'
     cardContainer.id = `${project.langage}`
