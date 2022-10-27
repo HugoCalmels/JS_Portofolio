@@ -329,10 +329,11 @@ function scrollToListener() {
 
 
 function globalScrollListener() {
+  
   window.addEventListener('scroll', (e) => {
     const scrolled = window.scrollY;
     // only for navbar
-
+    let projectsHeight = document.querySelector('.section.projects').getBoundingClientRect().height
     let hamburgerColoration = document.querySelector('.hamburger-container')
     if (scrolled>= window.innerHeight - navbar.getBoundingClientRect().height  ) {
       navbar.style.backgroundColor = "var(--lightGrey-color)"
@@ -368,7 +369,7 @@ function globalScrollListener() {
 
     // section projects
     if (scrolled >=  (window.innerHeight - navbarHeight - 1 )
-      && scrolled <= sectionProjectsHeight + (window.innerHeight - navbar.getBoundingClientRect().height)) {
+      && scrolled <= projectsHeight + (window.innerHeight - navbar.getBoundingClientRect().height)) {
       if (document.querySelector('.link-underline.projects').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.projects').classList.toggle('active')
@@ -379,11 +380,14 @@ function globalScrollListener() {
       document.querySelector('.link-underline.projects').classList.remove('active')
     }
     // section skillst)
+    console.log('-------------------')
+
     console.log('scrolled:' + scrolled)
-    console.log("before:" + (sectionProjectsHeight + sectionHomeHeight + navbarHeight))
-    console.log("after" +(sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight))
-    if (( scrolled > (sectionProjectsHeight + sectionHomeHeight + navbarHeight)) 
-      && scrolled <   (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)) {
+    console.log("before:" + (projectsHeight + sectionHomeHeight-navbarHeight ))
+    //console.log("after" +(projectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight))
+    console.log('-------------------')
+    if (( scrolled >= (projectsHeight + sectionHomeHeight-navbarHeight)) 
+      && scrolled <=   (projectsHeight+sectionHomeHeight+sectionSkillsHeight-navbarHeight)) {
       if (document.querySelector('.link-underline.skills').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.skills').classList.toggle('active')
@@ -392,7 +396,7 @@ function globalScrollListener() {
       document.querySelector('.link-underline.skills').classList.remove('active')
     }
     // section contact
-    if (scrolled  >=  (sectionProjectsHeight+navbarHeight+sectionHomeHeight+sectionSkillsHeight)  ){
+    if (scrolled  >=  (projectsHeight+sectionHomeHeight+sectionSkillsHeight-navbarHeight)  ){
       if (document.querySelector('.link-underline.contact').classList.contains('active')) {
       } else {
         document.querySelector('.link-underline.contact').classList.toggle('active')
