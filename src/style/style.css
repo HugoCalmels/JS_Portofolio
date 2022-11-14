@@ -424,6 +424,10 @@ main {
 .projets-taste-text{
   padding-bottom: 24px;
 }
+.projets-taste-text a{
+  font-size: 900;
+
+}
 .projets-taste-text p{
   font-family: 'Roboto';
   font-size: .875rem;
