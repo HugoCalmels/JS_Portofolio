@@ -4,5 +4,5 @@
 
 Premier portfolio développé en JavaScript vanilla, réalisé au début de mon apprentissage du développement web.
 
-Stack : JavaScript · HTML · CSS  
+Stack : JavaScript Vanilla · HTML · CSS  
 Statut : archive
